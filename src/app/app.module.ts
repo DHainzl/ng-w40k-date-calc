@@ -1,16 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { ImperialDatePipe } from './pipes/imperial-date.pipe';
+import { OldDatePipe } from './pipes/old-date.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ImperialDatePipe,
+    OldDatePipe,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }
